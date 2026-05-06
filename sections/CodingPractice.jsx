@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Target, Layers, ExternalLink } from "lucide-react";
+import { Code2, Target, ExternalLink } from "lucide-react";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
@@ -18,12 +18,6 @@ const stats = [
     label: "Focus",
     value: "Data Structures & Algorithms",
     gradient: "from-purple-500/20 to-pink-500/20"
-  },
-  {
-    icon: Layers,
-    label: "Topics Practiced",
-    value: "Arrays, Trees, Graphs, DP",
-    gradient: "from-emerald-500/20 to-teal-500/20"
   }
 ];
 
