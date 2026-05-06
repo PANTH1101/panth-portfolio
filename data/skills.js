@@ -1,38 +1,26 @@
 export const skillGroups = [
   {
     category: "Programming",
-    skills: [
-      { name: "C", level: 80 },
-      { name: "C++", level: 82 },
-      { name: "Java", level: 74 },
-      { name: "Python", level: 68 },
-      { name: "JavaScript", level: 66 },
-    ],
+    icon: "Code2",
+    skills: ["C", "C++", "JavaScript", "Python", "Java"],
+    gradient: "from-cyan-500/20 to-blue-500/20"
   },
   {
-    category: "Web",
-    skills: [
-      { name: "HTML", level: 86 },
-      { name: "CSS", level: 80 },
-      { name: "PHP", level: 64 },
-      { name: "REST API", level: 60 },
-      { name: "Django", level: 56 },
-    ],
+    category: "Web Development",
+    icon: "Globe",
+    skills: ["HTML", "CSS", "Tailwind CSS", "Next.js", "Django", "REST APIs"],
+    gradient: "from-purple-500/20 to-pink-500/20"
   },
   {
     category: "CS Fundamentals",
-    skills: [
-      { name: "DSA", level: 72 },
-      { name: "DBMS", level: 70 },
-      { name: "MySQL", level: 72 },
-      { name: "Problem Solving", level: 78 },
-    ],
+    icon: "BrainCircuit",
+    skills: ["DSA", "DBMS", "Problem Solving", "MySQL", "OOP"],
+    gradient: "from-emerald-500/20 to-teal-500/20"
   },
   {
-    category: "Tools",
-    skills: [
-      { name: "VS Code", level: 86 },
-      { name: "Postman", level: 72 },
-    ],
-  },
+    category: "Tools & Platforms",
+    icon: "Wrench",
+    skills: ["Git", "GitHub", "VS Code", "Postman", "XAMPP"],
+    gradient: "from-orange-500/20 to-amber-500/20"
+  }
 ];

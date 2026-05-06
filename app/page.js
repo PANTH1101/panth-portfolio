@@ -1,5 +1,6 @@
 import About from "@/sections/About";
 import Achievements from "@/sections/Achievements";
+import CodingPractice from "@/sections/CodingPractice";
 import Contact from "@/sections/Contact";
 import Education from "@/sections/Education";
 import Experience from "@/sections/Experience";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <CodingPractice />
       <Projects />
       <Achievements />
       <Education />

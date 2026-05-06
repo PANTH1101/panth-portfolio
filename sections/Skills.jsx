@@ -1,52 +1,29 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
+import SkillCard from "@/components/SkillCard";
 import { skillGroups } from "@/data/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 sm:py-28">
-      <Container>
+    <section id="skills" className="relative py-20 sm:py-28">
+      {/* Ambient background effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl" />
+        <div className="absolute right-1/4 bottom-1/4 h-96 w-96 rounded-full bg-purple-500/5 blur-3xl" />
+      </div>
+
+      <Container className="relative z-10">
         <SectionHeading
           eyebrow="Skills"
-          title="A stack shaped for shipping."
-          description="Core tools I use to build responsive interfaces, API-backed apps, and polished developer experiences."
+          title="Technologies I build with."
+          description="A growing stack focused on modern web development, computer science fundamentals, and practical software engineering."
         />
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {skillGroups.map((group, groupIndex) => (
-            <motion.article
-              key={group.category}
-              className="glass-card rounded-lg p-5 sm:p-6"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.55, delay: groupIndex * 0.08, ease: "easeOut" }}
-              whileHover={{ y: -6 }}
-            >
-              <h3 className="text-2xl font-black text-foreground">{group.category}</h3>
-              <div className="mt-6 grid gap-5">
-                {group.skills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="mb-2 flex items-center justify-between gap-3">
-                      <span className="text-sm font-bold text-foreground">{skill.name}</span>
-                      <span className="font-mono text-xs font-bold text-primary">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 overflow-hidden rounded-lg bg-muted">
-                      <motion.div
-                        className="h-full rounded-lg bg-gradient-to-r from-teal-300 via-rose-300 to-lime-300"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.9, delay: 0.12, ease: "easeOut" }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.article>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {skillGroups.map((group, index) => (
+            <SkillCard key={group.category} group={group} index={index} />
           ))}
         </div>
       </Container>
