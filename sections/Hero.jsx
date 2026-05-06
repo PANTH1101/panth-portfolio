@@ -24,10 +24,9 @@ export default function Hero() {
 
           <h1 className="max-w-4xl text-5xl font-black leading-[0.96] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
             {profile.name}
-            <span className="block text-gradient">{profile.role.split(" | ")[1]}</span>
           </h1>
 
-          <p className="mt-6 text-lg font-bold text-primary sm:text-xl">{profile.role}</p>
+          <p className="mt-6 text-lg font-bold text-primary sm:text-xl">{profile.role.split(" | ")[0]}</p>
           <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
             {profile.headline}
           </p>
