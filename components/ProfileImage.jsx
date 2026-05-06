@@ -6,36 +6,10 @@ import Image from "next/image";
 export default function ProfileImage() {
   return (
     <div className="relative flex h-full items-center justify-center">
-      {/* Background Glow Effects */}
+      {/* Background Glow Effects - Simplified */}
       <div className="absolute inset-0 flex items-center justify-center">
-        {/* Purple Glow */}
-        <motion.div
-          className="absolute h-[400px] w-[400px] rounded-full bg-purple-500/30 blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.4, 0.3],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        
-        {/* Indigo Glow */}
-        <motion.div
-          className="absolute h-[350px] w-[350px] rounded-full bg-indigo-500/30 blur-3xl"
-          animate={{
-            scale: [1.1, 1, 1.1],
-            opacity: [0.4, 0.3, 0.4],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        />
+        {/* Single combined glow */}
+        <div className="absolute h-[400px] w-[400px] rounded-full bg-gradient-to-br from-purple-500/20 via-indigo-500/20 to-purple-500/20 blur-3xl animate-pulse" />
       </div>
 
       {/* Profile Image Container */}
@@ -45,19 +19,6 @@ export default function ProfileImage() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        {/* Animated Ring */}
-        <motion.div
-          className="absolute -inset-4 rounded-full bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-purple-500/20"
-          animate={{
-            rotate: 360,
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
         {/* Floating Image Container */}
         <motion.div
           className="relative overflow-hidden rounded-full border border-white/10 shadow-2xl"

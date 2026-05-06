@@ -30,26 +30,22 @@ export default function Achievements() {
               return (
                 <motion.article
                   key={achievement.title}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-card/40 p-6 backdrop-blur-xl transition-all duration-500 hover:border-white/20"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-card/40 p-6 backdrop-blur-xl transition-all duration-300 hover:border-white/20"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
                   whileHover={{ 
                     scale: 1.02,
-                    boxShadow: "0 20px 60px rgba(139, 92, 246, 0.15), 0 0 40px rgba(139, 92, 246, 0.1)"
                   }}
                 >
                   {/* Glow effect on hover */}
-                  <motion.div
-                    className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-br ${achievement.accent} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100`}
-                    initial={false}
-                  />
+                  <div className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-br ${achievement.accent} opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100`} />
 
                   {/* Content */}
                   <div className="relative z-10">
                     {/* Icon */}
-                    <div className={`mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${achievement.accent} backdrop-blur-sm transition-transform duration-500 group-hover:scale-110`}>
+                    <div className={`mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${achievement.accent} backdrop-blur-sm transition-transform duration-300 group-hover:scale-110`}>
                       <Icon size={28} className="text-foreground" strokeWidth={2} />
                     </div>
 

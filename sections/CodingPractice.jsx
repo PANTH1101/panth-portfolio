@@ -62,25 +62,21 @@ export default function CodingPractice() {
               return (
                 <motion.div
                   key={stat.label}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-500 hover:border-white/20"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-300 hover:border-white/20"
                   initial={{ opacity: 0, x: -40 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ 
                     scale: 1.02,
-                    boxShadow: "0 20px 60px rgba(6, 182, 212, 0.15)"
                   }}
                 >
                   {/* Glow effect */}
-                  <motion.div
-                    className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-br ${stat.gradient} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100`}
-                    initial={false}
-                  />
+                  <div className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-br ${stat.gradient} opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100`} />
 
                   <div className="relative z-10 flex items-center gap-4">
                     {/* Icon */}
-                    <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${stat.gradient} backdrop-blur-sm transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                    <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${stat.gradient} backdrop-blur-sm transition-transform duration-300 group-hover:scale-110`}>
                       <Icon size={28} className="text-foreground" strokeWidth={2} />
                     </div>
 
@@ -96,7 +92,7 @@ export default function CodingPractice() {
                   </div>
 
                   {/* Decorative corner glow */}
-                  <div className={`absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br ${stat.gradient} opacity-20 blur-2xl transition-opacity duration-500 group-hover:opacity-40`} />
+                  <div className={`absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br ${stat.gradient} opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-40`} />
                 </motion.div>
               );
             })}

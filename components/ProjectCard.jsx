@@ -8,21 +8,17 @@ import Button from "./Button";
 export default function ProjectCard({ project, index }) {
   return (
     <motion.article
-      className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:border-white/20"
+      className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-card/40 backdrop-blur-xl transition-all duration-300 hover:border-white/20"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ 
         scale: 1.02,
-        boxShadow: "0 20px 60px rgba(139, 92, 246, 0.15), 0 0 40px rgba(139, 92, 246, 0.1)"
       }}
     >
       {/* Glow effect on hover */}
-      <motion.div
-        className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-purple-500/20 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100"
-        initial={false}
-      />
+      <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-purple-500/20 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
 
       {/* Card content */}
       <div className="relative z-10 flex h-full flex-col">
@@ -37,7 +33,7 @@ export default function ProjectCard({ project, index }) {
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             {/* Gradient overlay */}
-            <div className={`absolute inset-0 bg-gradient-to-t ${project.accent} opacity-30 transition-opacity duration-500 group-hover:opacity-20`} />
+            <div className={`absolute inset-0 bg-gradient-to-t ${project.accent} opacity-30 transition-opacity duration-300 group-hover:opacity-20`} />
           </div>
         ) : (
           <div className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-t-2xl bg-gradient-to-br ${project.accent}`}>
