@@ -21,17 +21,6 @@ const stats = [
   }
 ];
 
-const topics = [
-  "Arrays",
-  "Strings",
-  "Linked Lists",
-  "Trees",
-  "Graphs",
-  "Dynamic Programming",
-  "Recursion",
-  "Binary Search"
-];
-
 export default function CodingPractice() {
   return (
     <section id="coding-practice" className="relative py-20 sm:py-28">
@@ -106,29 +95,13 @@ export default function CodingPractice() {
               improve coding efficiency, and develop strong logical thinking for real-world software engineering.
             </p>
 
-            {/* Topic Badges */}
-            <div className="mt-6 flex flex-wrap gap-2">
-              {topics.map((topic, index) => (
-                <motion.span
-                  key={topic}
-                  className="inline-flex items-center rounded-full border border-cyan-400/10 bg-white/5 px-4 py-2 text-sm font-medium text-foreground backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:shadow-lg hover:shadow-cyan-400/20"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
-                >
-                  {topic}
-                </motion.span>
-              ))}
-            </div>
-
             {/* LeetCode Button */}
             <motion.div
               className="mt-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
               <Button
                 as="a"
